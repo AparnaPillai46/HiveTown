@@ -12,13 +12,23 @@
 <body>
 
 <script src="./JS/angular.min.js" ></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 <script>
   angular.module('emailExample', [])
     .controller('ExampleController', ['$scope', function($scope) {
       $scope.text = 'me@example.com';
     }]);
   
-  
+  $( "#sendMail" ).validate({
+	  rules: {
+		  emailId: {
+	      required: true,
+	      email: true
+	    }
+	  }
+	});  
 </script>
 <h1>Send Email</h1>
  <!--  Email: <input type="email" name="username" ng-model="text" required>
