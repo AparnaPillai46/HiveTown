@@ -9,7 +9,7 @@
 		<action name="Login">
 			<result>JSP/SendMail.jsp</result>
 		</action>
-		<action name="Welcome" class="com.hivetown.action.SendMailAction">
+		<action name="sendMail" class="com.hivetown.action.SendMailAction">
 			<result name="SUCCESS">JSP/Success.jsp</result>
 		</action>
 	</package>

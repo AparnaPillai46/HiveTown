@@ -1,19 +1,51 @@
 package com.hivetown.action;
 
 public class SendMailAction {
-	private String username;
+	private String emailId;
 	 
-	public String getUsername() {
-		return username;
+	private String content;
+	
+	
+	
+	/**
+	 * @return the emailId
+	 */
+	public String getEmailId() {
+		return emailId;
 	}
- 
-	public void setUsername(String username) {
-		this.username = username;
+
+
+
+	/**
+	 * @param emailId the emailId to set
+	 */
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
- 
+
+
+
+	/**
+	 * @return the content
+	 */
+	public String getContent() {
+		return content;
+	}
+
+
+
+	/**
+	 * @param content the content to set
+	 */
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+
+
 	// all struts logic here
 	public String execute() {
- 
+ System.out.println("here "+emailId +"..........."+content);
 		return "SUCCESS";
  
 	}

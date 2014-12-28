@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<s:form name="sendMail" ction="Welcome">
+<s:form action="sendMail">
 <body>
 
 <script src="./JS/angular.min.js" ></script>
@@ -20,18 +20,18 @@
   
   
 </script>
-<h1>Struts 2 Hello World Example</h1>
-  Email: <input type="email" name="username" ng-model="text" required>
+<h1>Send Email</h1>
+ <!--  Email: <input type="email" name="username" ng-model="text" required>
     <span class="error" ng-show="sendMail.username.$error.required">
       Required!</span>
     <span class="error" ng-show="sendMail.username.$error.email">
       Not valid email!</span>
         <tt>text = {{text}}</tt><br/>
       
-      
-
-		<s:password name="password" label="Password" />
-		<s:submit />
+       -->
+<s:textfield name="emailId" label="emailId" />
+		<s:textarea label="" name="content" cols="40" rows="10"/>
+		<s:submit  />
 	</s:form>
 </body>
 </html>
